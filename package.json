@@ -20,7 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "coverage": "npm test -- --coverage",
+    "jest-coverage": "./node_modules/.bin/jest --coverage",
     "eject": "react-scripts eject"
   },
   "browserslist": {
@@ -42,6 +42,7 @@
   },
   "jest": {
     "collectCoverageFrom": ["./src/**"],
+    "watchPathIgnorePatterns": ["__snapshots__"],
     "coverageThreshold": {
       "global": {
         "lines": 90
