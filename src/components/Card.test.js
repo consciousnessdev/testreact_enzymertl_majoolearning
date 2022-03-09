@@ -1,21 +1,17 @@
 import React from 'react';
-import { shallow, render, mount } from 'enzyme';
+import { shallow } from 'enzyme';
+// import toJson from 'enzyme-to-json';
 import Card from './Card';
 
-// const wrapper = shallow(<Card />);
-// shallow : render only one of wrapped component on function,
-// it means, when those component have other component as child component 
-// its not going to shallowing too
-// console.log(wrapper);
-
-// Full Test Suite
+// snapshot test: is test by compare before after component from snapshot
 it('expect to render Card component', () => {
-    const wrapper = shallow(<Card />);
-    expect(wrapper.length).toEqual(1);
+    // const wrapper = shallow(<Card />);
+    // expect(toJson(wrapper)).toMatchSnapshot();
+    
+    // if no snap file it will saved,
+    // then if something has change and different with saved snap
+    // it will show error
+
+    // if want update to latest tested, pres u
+    expect(shallow(<Card />)).toMatchSnapshot();
 });
-
-// mount : will full DOM rendering, its ideal for testing between component
-// which is interact each other
-
-// render : used to render react components to static HTML &
-// analyze the resulting HTML structure, returned as LoadedCheerio
