@@ -6,7 +6,9 @@ exports[`render MainPage without crashing 1`] = `
 >
   <Header />
   <SearchBox />
-  <Scroll>
+  <Scroll
+    key="scroll"
+  >
     <ErrorBoundary>
       <CardList
         robots={Array []}

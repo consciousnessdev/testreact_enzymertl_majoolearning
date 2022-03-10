@@ -43,3 +43,25 @@ it('filters robots correctly 2', () => {
     },
   ]);
 });
+
+it('filters robots correctly 3', () => {
+  const mockProps3 = {
+    onRequestRobots: jest.fn(),
+    robots: [
+      {
+        id: 3,
+        name: 'John',
+        email: 'john@gmail.com',
+      },
+    ],
+    searchField: 'a',
+    isPending: false,
+  };
+  const filteredRobots = [];
+  const wrapper3 = shallow(<MainPage {...mockProps3} />);
+  expect(wrapper3.instance().filterRobots()).toEqual(filteredRobots);
+});
+
+/**
+ * On check coverage there show which line test not covered
+ */
