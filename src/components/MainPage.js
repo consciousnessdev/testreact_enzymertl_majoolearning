@@ -27,7 +27,7 @@ class MainPage extends Component {
       <div className="tc">
         <Header />
         <SearchBox searchChange={onSearchChange} />
-        <Scroll>
+        <Scroll key="scroll">
           {isPending ? (
             <h1>Loading</h1>
           ) : (
